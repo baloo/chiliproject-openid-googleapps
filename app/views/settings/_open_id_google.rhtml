@@ -1,0 +1,16 @@
+
+<p>
+  <label>
+    Enable Google OpenID
+  </label>
+  <%= check_box_tag("settings[open_id_google]", @settings['open_id_google'], :disabled => !Object.const_defined?(:OpenID)) %>
+</p>
+
+
+<p>
+  <label>
+    Google OpenID authentication domain
+  </label>
+  <%= text_field_tag("settings[open_id_google_domain]", @settings['open_id_google_domain']) %>
+</p>
+
