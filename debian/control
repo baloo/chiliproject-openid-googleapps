@@ -1,0 +1,15 @@
+Source: chiliproject-openid
+Section: unknown
+Priority: extra
+Maintainer: Zenexity package maintainers <packages@zenexity.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.2
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://git.debian.org/collab-maint/chiliproject-openid.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/chiliproject-openid.git;a=summary
+
+Package: chiliproject-openid
+Architecture: any
+Depends: chiliproject, ${shlibs:Depends}, ${misc:Depends}
+Description: Chiliproject openid fix
+ <insert long description, indented with spaces>

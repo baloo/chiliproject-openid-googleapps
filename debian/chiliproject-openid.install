@@ -1,0 +1,8 @@
+app/controllers/openid_controller.rb     usr/share/chiliproject/vendor/plugins/open_id_google/
+app/views/account/_login.rhtml           usr/share/chiliproject/vendor/plugins/open_id_google/
+app/views/account/login.rhtml            usr/share/chiliproject/vendor/plugins/open_id_google/
+app/views/settings/_open_id_google.rhtml usr/share/chiliproject/vendor/plugins/open_id_google/
+
+config/routes.rb                         usr/share/chiliproject/vendor/plugins/open_id_google/
+init.rb                                  usr/share/chiliproject/vendor/plugins/open_id_google/
+

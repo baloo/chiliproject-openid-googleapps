@@ -1,0 +1,5 @@
+chiliproject-openid (0.0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Zenexity package maintainers <packages@zenexity.com>  Thu, 31 May 2012 17:29:04 +0000
