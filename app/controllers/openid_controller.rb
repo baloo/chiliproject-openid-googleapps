@@ -86,6 +86,9 @@ class OpenidController < AccountController
         @user.lastname =  ax_resp.get("http://schema.openid.net/namePerson/last").first
         @user.mail =      ax_resp.get("http://schema.openid.net/contact/email").first
 
+        # Put auth_source as openid
+        @user.auth_source = authsource
+
         @user.register
 
         case Setting.self_registration
@@ -98,6 +101,11 @@ class OpenidController < AccountController
         end
       else
         # login
+
+        # Put authsource as openid
+        @user.auth_source = authsource
+        @user.save
+
         if @user.active?
           successful_authentication(@user)
         else
@@ -122,5 +130,9 @@ class OpenidController < AccountController
       @consumer = OpenID::Consumer.new(session, store)
     end
     return @consumer
+  end
+
+  def authsource
+    AuthSource.find(:first, :conditions=>["name = ?", "AuthSourceOpenIDGoogle"])
   end
 end
