@@ -16,6 +16,7 @@
 #  end
 #end
 
+require File.join(File.dirname(__FILE__), 'app', 'models', 'authsource')
 
 Redmine::Plugin.register :open_id_google do
   name 'OpenId Google'
@@ -27,3 +28,15 @@ Redmine::Plugin.register :open_id_google do
     'openid_google_domain'=> ""
     }, :partial => 'settings/open_id_google'
 end
+
+begin
+  #try to register AuthSourceOpenIDGoogle
+  authsource = AuthSource.find(:first, :conditions=>["name = ?", "AuthSourceOpenIDGoogle"])
+  if authsource.nil?
+    authsource = AuthSourceOpenIDGoogle.new
+    authsource.save
+  end
+  
+rescue
+end
+
