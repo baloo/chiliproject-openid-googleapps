@@ -18,7 +18,7 @@
 
 require File.join(File.dirname(__FILE__), 'app', 'models', 'authsource')
 
-Redmine::Plugin.register :open_id_google do
+Redmine::Plugin.register :chiliproject_openid_googleapps do
   name 'OpenId Google'
   author 'Arthur Gautier'
   description 'This plugin helps you to log from google apps'
